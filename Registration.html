@@ -1,1 +1,219 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="Codeonline.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="bootstrap.min.css">
+<style>
+    img{
+        width: 30px; height: 30px;
+        margin: 0 auto;
+    }
+</style>
+</head>
+<body>
+
+<!------------------------- Registration Area------------------------------>
+
+<div class="registration" style="margin-left:30px; margin-right:30px;">
+<h1 style="font-weight:bold; font-family:sans-serif; color:#0059b3; text-align:center; margin-top:30px; text-transform: uppercase;">Join us with 100% peace of mind and</h1> <br><h4 style="color:#0059b3; text-align:center;">Learn How To Code And Build Efficient Algorithms</h4><br>
+<p style="text-align:justify;">Welcome to CodeOnline, a leading online education platform dedicated to providing high-quality coding education. By registering for our online coding programs, you agree to be bound by these Terms and Conditions.</p>
+
+<ol style="text-align:justify;">
+<li>Registration and Enrollment</li>
+ <ul>
+ <li>To register for our online coding programs, you must provide accurate and complete information, including your name, email address, and payment details.</li>
+ <li> By registering, you represent and warrant that you are at least 13 years old (or the age of majority in your jurisdiction) and have the authority to agree to these Terms.</li>
+ </ul>
+
+<li>Payment and Refund Policy</li>
+  <ul>
+ <li>All payments are due upon registration and are non-refundable, except If you cancel your registration within 7 days of payment, you may be eligible for a full refund, minus any applicable processing fees.</li>
+</ul>
+</ol>
+</div>
+
+<!------------------------- End of Registration Area------------------------------>
+
+<!------------------------- Form Area------------------------------>
+<div class="row">
+
+  <div class="col-lg-3 col-md">
+
+  </div>
+  <div class="col-lg-6 col-md-12">
+<section class="registrationArea">
+
+	<h5 style="font-size:25px; font-weight:bold; font-family:sans-serif; color:#0059b3; text-align:center; margin-top:30px;">Registration Form</h5>
+	<form action="register.php" method="POST" class="form1">
+    <div class="inputbox">
+	<label>Full Name</label><br>
+	<input type="text" name="name" placeholder="Enter your name" required class="name"><br>
+    </div>
+    
+    <div class="inputbox">
+	<label>Email Address</label><br>
+	<input type="email" name="email" placeholder="Enter email address" class="email"><br>
+   </div>
+    
+    <div class="column">
+    	<div class="inputbox">
+	<label>Phone Number</label><br>
+	<input type="Number" name="phone" placeholder="Enter Phone Number" class="phone" required><br>
+    </div>
+    
+    
+   <div class="inputbox">
+	<label>Birth Date</label><br>
+	<input type="date" name="dob" placeholder="birthday" class="dob"><br>
+    </div>
+    </div>
+    
+    <div class="Genderoption">
+	<label>Gender</label><br>
+    <div class="Gendercheckbox">
+    <div class="checkbox">
+    <input type="radio" name="gender" id="check-male" class="gender" required>
+	<label for="check-male">Male</label>
+    </div>
+    
+    <div class="checkbox">
+	<input type="radio" name="gender" id="check-female" class="gender" required>
+	<label for="check-female">Female</label>
+    </div>
+
+    <div class="checkbox">
+	<input type="radio" name="gender" id="check-others" class="gender" required>
+	<label for="check-others">Prefer not to say</label><br>
+    </div>
+    </div>
+    </div>
+    
+	<div class="inputbox">
+	<label>Address</label><br>
+	<input type="text" name="address" placeholder="Enter street address" class="address"><br>
+    </div>
+
+    <div class="column">
+    <div class="inputbox">
+	<input type="text" name="country" placeholder="Enter your country" class="country">
+    </div>
+	<div class="inputbox">
+	<input type="text" name="city" placeholder="Enter your city" class="city"><br>
+    </div>
+    </div>
+    <div class="column">
+    <div class="inputbox">
+	<input type="text" name="Address" placeholder="Enter your region" class="region">
+    </div>
+	<div class="inputbox">
+	<input type="Number" name="postal" placeholder="Postal code" id="" class="region"><br>
+    </div>
+    </div>
+    <div class="button"> 
+	<button type="submit" class="register-button btn btn-primary;">Submit</button>
+    
+        
+        <img id="loader" src="img/arrows.gif" alt="" style="width: 20px; height:20px; margin: 0 auto; margin-left: 40%; margin-top: 20px; display: none;">
+    
+   <div class="response">
+
+   </div>
+ 
+    </div>
+</form>
+</section>
+
+</div>
+
+ <div class="col-lg-3 col-md">
+
+  </div>
+</div>
+<!-------------------------End Form Area------------------------------>
+
+<!------------------------- Footer Area------------------------------>
+
+<footer>
+  <div class="footerArea">
+  <div class="row text-center">
+  <div class="col-sm-4">
+  <h4>CONTACT US</h4>
+  <p>Email:info@gmail.com</p>
+  <p>Phone:07019999999</p>
+  <p>Address:location</p>
+  </div>
+
+  <div class="col-sm-4">
+  <h4>QUICK LINKS</h4>
+  <p><a href="">Home</a></p>
+  <p><a href="">About</a></p>
+  <p><a href="">Registration</a></p>
+  <p><a href="">Login</a></p>
+  </div>
+ 
+  <div class="col-sm-4">
+  <h4>FOLLOW US</h4>
+  <p><a href=""><i class="bi bi-facebook"></i></a></p>
+  <p><a href=""><i class="bi bi-youtube"></i></a></p>
+  <p><a href=""><i class="bi bi-instagram"></i></a></p>
+</div>
+</div>
+
+<hr style="color:white; margin-right:100px; margin-left:100px;">
+
+<p class=""><i class="bi bi-c-circle"></i> 2024 CodeOnline. All rights reserved</p>
+</div>
+</footer>
+<!------------------------- End Footer Area------------------------------>
+<script src="jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+
+ <script>
+   
+   $(".form1").on("submit",function(e){
+    e.preventDefault();
+    const loader=$("#loader");
+    loader.css({"display":"block"});
+    setTimeout(function(){
+        $.ajax(
+                {url:"register.php",
+                type:"POST",
+                data:"name="+$(".name").val()+"&email=" + $(".email").val() 
+                +"&dob="+ $(".dob").val()+"&gender="+$(".gender").val()+
+                "&address="+$(".address").val()+"&country="+$(".country").val()+
+                "&city="+$(".city").val()+ "&postal="+
+                 $(".postal").val()+"&phone="+$(".phone").val()+
+                 "&region="+$(".region").val(),
+                error:function(er){
+                    console.log(er);
+                    loader.css({"display":"none"});
+                },
+                success:function(response){
+                    console.log(response);
+                    // let r = JSON.parse(response)
+                    // if(r.Response=="Registration Successful"){
+                        $(".response").css({"color":"green","padding":"10px","text-algin":"center"});
+                        $(".response").text(response);
+                    // }
+                    loader.css({"display":"none"});
+                }
+
+                }
+
+            );
+    },4000)
+            
+        });
+   
+ </script>
+</body>
+</html>
