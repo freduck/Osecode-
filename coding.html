@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="styles/editor.css">
+</head>
+<body>
+    <div class="editor-container">
+        <div class="editor-header">
+            <h2>Code Editor</h2>
+            <button id="run-btn">Run</button>
+        </div>
+        <div class="editor-split">
+            <div class="editor-pane">
+                <textarea id="code-editor" spellcheck="false"></textarea>
+            </div>
+            <div class="editor-pane">
+                <iframe id="output-frame" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+// Get the code editor and output iframe elements
+const codeEditor = document.getElementById('code-editor');
+const outputFrame = document.getElementById('output-frame');
+const runBtn = document.getElementById('run-btn');
+
+// Add an event listener to the "Run" button
+runBtn.addEventListener('click', () => {
+  // Get the user's code from the textarea
+  const userCode = codeEditor.value;
+  // Create a new HTML document for the output iframe
+  const outputDoc = outputFrame.contentDocument || outputFrame.contentWindow.document;
+
+  // Set the iframe's content to the user's code
+outputFrame.sandbox = 'allow-scripts allow-same-origin';
+  outputDoc.body.innerHTML = userCode;
+// Focus the textarea to allow users to continue editing
+  codeEditor.focus();
+});
+
+// Add an event listener to the textarea to update the output iframe in real-time
+codeEditor.addEventListener('input', () => {
+  // Get the user's code from the textarea
+  const userCode = codeEditor.value;
+
+  // Create a new HTML document for the output iframe
+  const outputDoc = outputFrame.contentDocument || outputFrame.contentWindow.document;
+
+  // Set the iframe's content to the user's code
+  outputDoc.body.innerHTML = userCode;
+});
+
+    </script>
+</body>
+</html>

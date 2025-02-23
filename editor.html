@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		body {
+    font-family: monospace;
+}
+
+.editor-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#code-editor {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    resize: none;
+}
+
+#preview {
+    width: 50%;
+    height: 100%;
+    border: none;
+}
+	</style>
+	 <div class="editor-container">
+        <textarea id="code-editor" spellcheck="false">
+        	
+        </textarea>
+        <iframe id="preview" frameborder="0"></iframe>
+    </div>
+	<script>
+		const codeEditor = document.getElementById('code-editor');
+const preview = document.getElementById('preview');
+
+codeEditor.addEventListener('input', () => {
+    const code = codeEditor.value;
+    try {
+        preview.contentWindow.eval(code);
+    } catch (error) {
+        console.error(error);
+    }
+});
+
+
+
+	</script>
+</body>
+</html>
